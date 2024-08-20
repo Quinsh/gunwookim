@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/gunwookim/static/css/main.171f30ba.css",
-    "main.js": "/gunwookim/static/js/main.48acebc0.js",
+    "main.css": "/gunwookim/static/css/main.9ed488bd.css",
+    "main.js": "/gunwookim/static/js/main.9946763e.js",
     "static/js/453.3bf22c17.chunk.js": "/gunwookim/static/js/453.3bf22c17.chunk.js",
     "index.html": "/gunwookim/index.html",
-    "main.171f30ba.css.map": "/gunwookim/static/css/main.171f30ba.css.map",
-    "main.48acebc0.js.map": "/gunwookim/static/js/main.48acebc0.js.map",
+    "main.9ed488bd.css.map": "/gunwookim/static/css/main.9ed488bd.css.map",
+    "main.9946763e.js.map": "/gunwookim/static/js/main.9946763e.js.map",
     "453.3bf22c17.chunk.js.map": "/gunwookim/static/js/453.3bf22c17.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.171f30ba.css",
-    "static/js/main.48acebc0.js"
+    "static/css/main.9ed488bd.css",
+    "static/js/main.9946763e.js"
   ]
 }
