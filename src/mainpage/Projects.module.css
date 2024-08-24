@@ -1,0 +1,28 @@
+
+h2 {
+    display: inline-block;
+    align-self: flex-start;
+    font-weight: 300;
+    text-decoration: underline;
+}
+
+.onlyMobile {
+    display: none;
+    align-self: flex-start;
+    color: var(--gray);
+    margin: 0 0 1em 0;
+}
+
+@media (max-width: 768px) {
+    .onlyMobile {
+        display: inline-block;
+    }
+    h2 {
+        margin-bottom: 0.2em;
+    }
+}
+
+
+p {
+    margin: 0;
+}

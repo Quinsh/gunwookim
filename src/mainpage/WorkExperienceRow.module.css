@@ -1,0 +1,56 @@
+
+
+
+.WorkExperienceRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin: 0.3em 0;
+}
+
+.firstTwo {
+    display: flex;
+    flex: 5;
+    text-align: left;
+}
+
+.lastTwo {
+    display: flex;
+    flex: 5;
+    text-align: right;
+}
+
+.lastThreeItemsContainer {
+    display: flex;
+    flex: 6;
+    justify-content: space-between;
+}
+
+.equalWidthItemLeft {
+    flex: 1;
+    text-align: left;
+}
+
+.equalWidthItemRight {
+    flex: 1;
+    text-align: right;
+}
+
+.description {
+    align-self: flex-start;
+    margin: 0 0 0 25%;
+    opacity: 0; 
+    max-height: 0; 
+    overflow: hidden; 
+    transition: opacity 0.5s ease-in-out, max-height 1.2s ease-in-out, margin 0.5s ease-in-out;
+}
+
+.WorkExperienceRow:hover + .description,
+.description:hover {
+    margin: 1em 0 1em 25%;
+    opacity: 1;
+    max-height: 500px; 
+}

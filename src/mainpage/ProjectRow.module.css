@@ -1,0 +1,42 @@
+.projectRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin: 0.3em 0;
+}
+
+.firstItem {
+    flex: 3;  /* First item takes up the remaining space on the left */
+    text-align: left;
+}
+
+.lastThreeItemsContainer {
+    display: flex;
+    flex: 4;  /* This container will take up 50% of the total row width */
+    justify-content: space-between;  /* Space the last three items equally */
+}
+
+.equalWidthItem {
+    flex: 1;  /* Each item will occupy an equal width within the last 50% of the row */
+    text-align: right;  /* Align text to the right for consistency */
+}
+
+.description {
+    align-self: flex-start;
+    opacity: 0;  /* Start hidden */
+    max-height: 0;  /* Start with zero height */
+    overflow: hidden;  /* Ensure content doesn't overflow */
+    transition: opacity 0.5s ease-in-out, max-height 1.5s ease-in-out, margin 0.5s ease-in-out;  /* Smooth transition */
+}
+
+/* Show the description when the ProjectRow is hovered */
+.projectRow:hover + .description,
+.description:hover {
+    margin: 0.5em 0 0.8em 0;
+    margin-left: 5%;
+    opacity: 1;
+    max-height: 1000px;  /* Adjust the max-height value based on your content */
+}

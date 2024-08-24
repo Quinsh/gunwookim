@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import Title from "./mainpage/Title";
+import styles from './App.css'
+import VerticalFlexbox from "./mainpage/VerticalFlexbox";
+import Margin from "./Margin";
+import Projects from "./mainpage/Projects";
+import WorkExperience from "./mainpage/WorkExperience";
+import Star from "./mainpage/Star";
+
+const isMobile = window.innerWidth <= 768;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {isMobile ? <Margin size={5}/> : <Margin size={15}/>}
+      <VerticalFlexbox>
+
+        <Title/>
+
+        <Star/>
+        <Margin size={2}/>
+
+        <Projects/>
+        <WorkExperience/>
+        <p>building website...</p>
+        <Margin size={30}/>
+      </VerticalFlexbox>
+    </>
   );
 }
 

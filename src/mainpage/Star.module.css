@@ -1,0 +1,10 @@
+
+
+.star {
+    width: 3em;
+    height: auto;
+}
+
+.starouterdiv {
+    display: inline-flex;
+}
