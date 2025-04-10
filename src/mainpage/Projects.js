@@ -9,24 +9,32 @@ const isMobile = window.innerWidth <= 768;
 
 const Projects = () => (
     <VerticalFlexboxFix width={'55em'}>
-        <h2>Projects</h2>
+        <h2>Projects <i className={styles.h2small}>(hover for details)</i></h2>
         <div className={styles.onlyMobile}>(click row for details)</div>
+
+        <ProjectRow>
+            <p><a href="https://github.com/yashmalikk/CSC213_Final_Project" target="_blank">RSA Encrypted Messenger</a></p>
+            <p>C</p>
+            <p>1141 lines</p>
+            <p>2024/12/20</p>
+            <p>
+                An RSA based end-to-end encrypted messaging program for local networks, especially Grinnell Colleges' MATLAN. Messages are saved locally using file system. Multithreading is used for encryption/decryption and bi-directional message sending.
+            </p>
+        </ProjectRow>
 
         <ProjectRow>
             <p><a href="https://github.com/Quinsh/NeuralNetworkCpp" target="_blank">Neural Network Implementation</a></p>
             <p>C++</p>
-            <p>913 lines</p>
+            <p>1133 lines</p>
             <p>2024/08/24</p>
             <p>
-                Implementing neural network in C++. Backprop is done with Batch Gradient Descent in default. Benchmarked way how we use Keras:
-                you can <i id="underline">create models, add layers, specify learning rate, use different activations (RELU, SIGMOID, TANH, LINEAR, SOFTMAX), use different cost functions (MSE, BinaryCrossEntropy, CategoricalCrossEntropy)</i>. 
+                <a href="https://youtu.be/qMMVPXoV05s" target='blank'>[Watch Live Coding 🔴]</a> <br/><br/>
+                Implementing neural network in C++. Benchmarked way how we use Keras:
+                you can <i id="underline">create models, add layers, specify learning rate, use different activations (RELU, SIGMOID, TANH, LINEAR, SOFTMAX), use different cost functions (MSE, BinaryCrossEntropy, CategoricalCrossEntropy), and choose among Stochastic Gradient Descent, Mini-Batch, and Batch</i>. 
                 <br/><br/>
                 In this project, I tried to write more Cpp-like code, pursuing "self-documenting" style instead of writing bunch of comments like Java. Making design choices for code efficiency and semantic clarity was hard: 
                 e.g. should I use function pointer, instead of functional library? does using std::move decrease overhead here? is it better to use unsigned int, size_t here? inline functions?...
                 designing Objects well to make clean code is hard too... And also circular dependency issues were so annoying.
-                <br/><br/>
-                Backpropagation was a bit harder than I thought. I was implementing BatchGD and not SGD, and I was stuck in first hidden layer's weight gradient computation 
-                (since weight gradient is delta * output from previous layer and I didn't know which input sample I needed to use for this). There was nothing on internet. I just ended up doing (delta * output from one sample) for all sample, with eta = eta/sample_size.
             </p>
         </ProjectRow>
 
@@ -48,6 +56,16 @@ const Projects = () => (
             <p>2023/10/23</p>
             <p>
                 Helping students find the best course combination when they input series of courses they want to take. Implemented with basic html/css and django for backend.
+            </p>
+        </ProjectRow>
+
+        <ProjectRow>
+            <p><a href="https://www.youtube.com/watch?v=MsnWCGpVDLE&t=74s" target="_blank">W A V E - mobile game</a></p>
+            <p>C#</p>
+            <p>???? lines</p>
+            <p>2020/??/??</p>
+            <p>
+                Mobile game I made in Unity back in High School. 100 hours of solo development. 
             </p>
         </ProjectRow>
 

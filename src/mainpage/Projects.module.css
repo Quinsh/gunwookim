@@ -13,6 +13,13 @@ h2 {
     margin: 0 0 1em 0;
 }
 
+.h2small {
+    all: unset;
+    text-decoration: none;
+    font-size: 80%;
+    font-weight: 100;
+}
+
 @media (max-width: 768px) {
     .onlyMobile {
         display: inline-block;

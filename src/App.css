@@ -3,10 +3,10 @@
 
 
 :root {
-    --background-col: #090910; /* 101014 bluish gray */
-    --text-col: #f1f1f1;
-    --pronunciation-col: #313131;
-    --link-col: hsl(0, 0%, 69%);
+    --background-col: #000913; /* 101014 bluish gray */
+    --text-col: #f0f0f0;
+    --pronunciation-col: #d4d4d4;
+    --link-col: hwb(230 32% 0%);
     --gray: #474747;
 }
 
