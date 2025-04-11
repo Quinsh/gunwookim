@@ -8,7 +8,7 @@ const Title = () => {
     return (
     <section className={styles.Title}>
         <VerticalFlexbox>
-            <h1 className={styles.name}>Gun Woo Kim</h1>
+            <h1 className={styles.name}>GunWoo (Kai) Kim</h1>
             <div className={styles.pronunciation}>/kʌ.nu kim/</div>
 
             <p className={styles.descriptions}>Bachelor in CS & Math. 2027' Grinnell College</p>

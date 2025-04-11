@@ -1,9 +1,9 @@
-
 h2 {
     display: inline-block;
     align-self: flex-start;
     font-weight: 300;
     text-decoration: underline;
+    font-size: var(--font-size-section-heading);
 }
 
 .onlyMobile {
@@ -11,12 +11,13 @@ h2 {
     align-self: flex-start;
     color: var(--gray);
     margin: 0 0 1em 0;
+    font-size: var(--font-size-description);
 }
 
 .h2small {
     all: unset;
     text-decoration: none;
-    font-size: 80%;
+    font-size: 90%;
     font-weight: 100;
 }
 
@@ -26,10 +27,17 @@ h2 {
     }
     h2 {
         margin-bottom: 0.2em;
+        font-size: var(--font-size-section-heading-mobile);
     }
 }
 
-
 p {
     margin: 0;
+    font-size: var(--font-size-description);
+}
+
+@media (max-width: 768px) {
+    p {
+        font-size: var(--font-size-description-mobile);
+    }
 }
