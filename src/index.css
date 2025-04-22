@@ -4,17 +4,17 @@
     --text-col: #f0f0f0;
     --pronunciation-col: #d4d4d4;
     --link-col: hwb(230 32% 0%);
-    --gray: #474747;
+    --gray: #8b8b8b;
 
     /* Gradient Colors */
-    --gradient-red: #ffa69e;
+    --gradient-red: #ffe4e1;
     --gradient-yellow: #fff48f;
     --gradient-green: #b1cb92;
     --gradient-cyan: #bbf7ff;
     --gradient-pink: #ffc5c0;
 
     /* Font Sizes */
-    --font-size-base: 1.1em;
+    --font-size-base: 1em;
     --font-size-mobile: 0.9em;
     --font-size-title: 6.5em;
     --font-size-title-mobile: 4.5em;

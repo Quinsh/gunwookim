@@ -15,6 +15,14 @@ const Education = () => {
             gpa: 'GPA: 3.95/4.00',
             description: 'Relevant Coursework: Functional Programming, OOP w/ Java, Operating Systems, Multivariable Calculus, Linear Algebra, Number Theory, Differential Equations, Fundamentals of Real Analysis',
             logo: process.env.PUBLIC_URL + '/images/companies/grinnell.png'
+        },
+        {
+            period: '~ 2023',
+            school: 'Korea University',
+            degree: 'B.S. Computer Science',
+            gpa: 'GPA: -',
+            description: '23학번 컴과. Dropped out.',
+            logo: process.env.PUBLIC_URL + '/images/companies/koreauniv.png'
         }
     ];
 

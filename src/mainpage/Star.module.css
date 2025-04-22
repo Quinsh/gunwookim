@@ -1,3 +1,10 @@
+.starContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2em 0;
+}
+
 .star {
     width: 3em;
     height: auto;
