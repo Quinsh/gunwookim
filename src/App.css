@@ -1,22 +1,28 @@
+html {
+    scroll-behavior: smooth;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;; 
+    font-family: 'Inter', 'Open Sans', 'Poppins', sans-serif; 
+    font-weight: 500;
     background-color: var(--background-col);
     color: var(--text-col);
     font-size: var(--font-size-base);
 }
 
 a {
-    color: var(--link-col);
+    color: var(--text-col);
     font-size: var(--font-size-link);
 }
 a:hover {
-    background: linear-gradient(120deg, var(--gradient-red), var(--gradient-yellow), var(--gradient-green), var(--gradient-cyan), var(--gradient-pink));
+    /* background: linear-gradient(120deg, var(--gradient-red), var(--gradient-yellow), var(--gradient-green), var(--gradient-cyan), var(--gradient-pink));
     background-size: 300% 300%;
     animation: shine 10s ease-in-out infinite, colorChange 10s linear infinite;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; */
+    color: var(--link-col);
 }
 
 #shining {

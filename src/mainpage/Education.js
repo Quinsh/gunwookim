@@ -13,7 +13,7 @@ const Education = () => {
             school: <a href="https://www.grinnell.edu/" target="_blank">Grinnell College</a>,
             degree: 'B.A. CS, Math',
             gpa: 'GPA: 3.95/4.00',
-            description: 'Relevant Coursework: Functional Programming, OOP w/ Java, Operating Systems, Multivariable Calculus, Linear Algebra, Number Theory, Differential Equations, Fundamentals of Real Analysis',
+            description: 'Relevant Coursework: Functional Programming, OOP w/ Java, Operating Systems, Algorithms, Multivariable Calculus, Linear Algebra, Number Theory, Differential Equations, Real Analysis, Abstract Algebra, Probability, ',
             logo: process.env.PUBLIC_URL + '/images/companies/grinnell.png'
         },
         {
@@ -27,24 +27,26 @@ const Education = () => {
     ];
 
     return (
-        <VerticalFlexboxFix width={'55em'}>
-            <h2>Education</h2>
-            <div className={styles.onlyMobile}>(click row for details)</div>
+        <div id="education">
+            <VerticalFlexboxFix width={'55em'}>
+                <h2>Education</h2>
+                <div className={styles.onlyMobile}>(click row for details)</div>
 
-            {education.map((edu, index) => (
-                <EducationRow
-                    key={index}
-                    period={edu.period}
-                    school={edu.school}
-                    degree={edu.degree}
-                    gpa={edu.gpa}
-                    description={edu.description}
-                    schoolLogo={edu.logo}
-                />
-            ))}
+                {education.map((edu, index) => (
+                    <EducationRow
+                        key={index}
+                        period={edu.period}
+                        school={edu.school}
+                        degree={edu.degree}
+                        gpa={edu.gpa}
+                        description={edu.description}
+                        schoolLogo={edu.logo}
+                    />
+                ))}
 
-            <Margin size={3}/>
-        </VerticalFlexboxFix>
+                <Margin size={3}/>
+            </VerticalFlexboxFix>
+        </div>
     );
 };
 

@@ -19,24 +19,26 @@ const WorkExperience = () => {
     ];
 
     return (
-        <VerticalFlexboxFix width={'55em'}>
-            <h2>Work Experience</h2>
-            <div className={styles.onlyMobile}>(click row for details)</div>
+        <div id="work-experience">
+            <VerticalFlexboxFix width={'55em'}>
+                <h2>Work Experience</h2>
+                <div className={styles.onlyMobile}>(click row for details)</div>
 
-            {experiences.map((exp, index) => (
-                <WorkExperienceRow
-                    key={index}
-                    company={exp.company}
-                    position={exp.position}
-                    period={exp.period}
-                    location={exp.location}
-                    companyLogo={exp.logo}
-                    description={exp.description}
-                />
-            ))}
+                {experiences.map((exp, index) => (
+                    <WorkExperienceRow
+                        key={index}
+                        company={exp.company}
+                        position={exp.position}
+                        period={exp.period}
+                        location={exp.location}
+                        companyLogo={exp.logo}
+                        description={exp.description}
+                    />
+                ))}
 
-            <Margin size={3}/>
-        </VerticalFlexboxFix>
+                <Margin size={3}/>
+            </VerticalFlexboxFix>
+        </div>
     );
 };
 

@@ -83,33 +83,35 @@ const Projects = () => {
     };
 
     return (
-        <VerticalFlexboxFix width={'55em'}>
-            <h2>Projects</h2>
-            <div className={styles.projectsContainer}>
-                <div 
-                    className={styles.carousel}
-                    onMouseEnter={() => setIsHovered(true)}
-                    onMouseLeave={() => setIsHovered(false)}
-                >
-                    <button className={styles.navButton} onClick={prevProject}>
-                        ←
-                    </button>
-                    <div className={styles.carouselContent}>
-                        {projects.map((project, index) => (
-                            <ProjectCard
-                                key={index}
-                                {...project}
-                                isActive={index === currentIndex}
-                            />
-                        ))}
+        <div id="projects">
+            <VerticalFlexboxFix width={'55em'}>
+                <h2>Projects</h2>
+                <div className={styles.projectsContainer}>
+                    <div 
+                        className={styles.carousel}
+                        onMouseEnter={() => setIsHovered(true)}
+                        onMouseLeave={() => setIsHovered(false)}
+                    >
+                        <button className={styles.navButton} onClick={prevProject}>
+                            ←
+                        </button>
+                        <div className={styles.carouselContent}>
+                            {projects.map((project, index) => (
+                                <ProjectCard
+                                    key={index}
+                                    {...project}
+                                    isActive={index === currentIndex}
+                                />
+                            ))}
+                        </div>
+                        <button className={styles.navButton} onClick={nextProject}>
+                            →
+                        </button>
                     </div>
-                    <button className={styles.navButton} onClick={nextProject}>
-                        →
-                    </button>
                 </div>
-            </div>
-            <Margin size={2} />
-        </VerticalFlexboxFix>
+                <Margin size={2} />
+            </VerticalFlexboxFix>
+        </div>
     );
 };
 

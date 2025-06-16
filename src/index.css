@@ -1,9 +1,9 @@
 :root {
     /* Base Colors */
-    --background-col: #010204;
-    --text-col: #f0f0f0;
-    --pronunciation-col: #d4d4d4;
-    --link-col: hwb(230 32% 0%);
+    --background-col: #EDEEEB;
+    --text-col: #31393C;
+    --pronunciation-col: #31393C;
+    --link-col: #3296F4;
     --gray: #8b8b8b;
 
     /* Gradient Colors */
@@ -16,7 +16,7 @@
     /* Font Sizes */
     --font-size-base: 1em;
     --font-size-mobile: 0.9em;
-    --font-size-title: 6.5em;
+    --font-size-title: 4.5em;
     --font-size-title-mobile: 4.5em;
     --font-size-subtitle: 2.5em;
     --font-size-subtitle-mobile: 2em;

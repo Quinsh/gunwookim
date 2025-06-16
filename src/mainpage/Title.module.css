@@ -17,11 +17,11 @@ h1 {
     font-style: normal; /* Non-italic */
     /* font-weight: bold; */
     color: var(--text-col);
-    background: linear-gradient(120deg, var(--gradient-red), var(--gradient-yellow), var(--gradient-green), var(--gradient-cyan), var(--gradient-pink));
+    /* background: linear-gradient(120deg, var(--gradient-red), var(--gradient-yellow), var(--gradient-green), var(--gradient-cyan), var(--gradient-pink));
     background-size: 300% 300%;
     animation: shine 15s ease-in-out infinite, colorChange 10s linear infinite;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; */
     margin: 0;
     padding: 0;
     line-height: 1;
@@ -44,10 +44,10 @@ h1 {
     display: inline-block;
     font-style: italic;
     font-weight: 500;
-    font-size: var(--font-size-pronunciation);
+    font-size: 1.5em;
     color: var(--pronunciation-col);
-    margin-bottom: 0.5em;
-    align-self:flex-end;
+    margin: 0.5em 0;
+    align-self: flex-end;
 }
 
 .descriptions {
@@ -58,9 +58,92 @@ h1 {
 
 @media (max-width: 768px) {
     .pronunciation {
-        font-size: var(--font-size-pronunciation-mobile);
+        font-size: 1em;
     }
     .descriptions {
         font-size: var(--font-size-description-mobile);
     }
+}
+
+.titleContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.title {
+    font-size: 2.5em;
+    margin: 0;
+    font-weight: 600;
+}
+
+.linksContainer {
+    display: flex;
+    gap: 2em;
+    margin: 1em 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    text-decoration: none;
+    color: var(--text-col);
+    transition: transform 0.2s ease;
+}
+
+.link:hover {
+    transform: translateY(-2px);
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.navButtons {
+    display: flex;
+    gap: 2.5em;
+    margin: 1.5em 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.navButton {
+    padding: 0.8em 1.5em;
+    background-color: var(--background-col);
+    color: var(--text-col);
+    border: 2px solid var(--text-col);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.navButton:hover {
+    background-color: var(--text-col);
+    color: var(--background-col);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .navButtons {
+        gap: 1em;
+    }
+    .navButton {
+        padding: 0.6em 1.2em;
+        font-size: 0.9em;
+    }
+}
+
+.profileImage {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 1em;
+    object-fit: cover;
 }
