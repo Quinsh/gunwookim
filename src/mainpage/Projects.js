@@ -84,7 +84,7 @@ const Projects = () => {
 
     return (
         <div id="projects">
-            <VerticalFlexboxFix width={'55em'}>
+    <VerticalFlexboxFix width={'55em'}>
                 <h2>Projects</h2>
                 <div className={styles.projectsContainer}>
                     <div 
@@ -110,9 +110,9 @@ const Projects = () => {
                     </div>
                 </div>
                 <Margin size={2} />
-            </VerticalFlexboxFix>
+    </VerticalFlexboxFix>
         </div>
-    );
+);
 };
 
 export default Projects;

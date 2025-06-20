@@ -47,15 +47,20 @@
 }
 
 .equalWidthItemLeft {
-    flex: 1;
+    flex: 2;
     text-align: left;
-    min-width: 8em;
+    min-width: 12em;
 }
 
 .equalWidthItemRight {
     flex: 1;
     text-align: right;
     min-width: 8em;
+}
+
+.equalWidthItemLeft.company {
+    flex: 4;
+    min-width: 18em;
 }
 
 .description {

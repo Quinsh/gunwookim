@@ -1,25 +1,72 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styles from './Title.module.css'
 import VerticalFlexbox from './VerticalFlexbox';
 import Margin from '../Margin';
 
 const Title = () => {
+    const [isAiPhoto, setIsAiPhoto] = useState(false);
+    const intervalRef = useRef(null);
+    const timeoutRef = useRef(null);
+
+    const flipPhoto = () => setIsAiPhoto((prev) => !prev);
+
+    // Auto-flip logic
+    useEffect(() => {
+        // Flip 2 seconds after load
+        timeoutRef.current = setTimeout(() => {
+            flipPhoto();
+            // Then flip every 5 seconds
+            intervalRef.current = setInterval(flipPhoto, 5000);
+        }, 1000);
+        return () => {
+            clearTimeout(timeoutRef.current);
+            clearInterval(intervalRef.current);
+        };
+    }, []);
+
+    // Reset timer on manual click
+    const handlePhotoClick = () => {
+        flipPhoto();
+        clearTimeout(timeoutRef.current);
+        clearInterval(intervalRef.current);
+        // Restart auto-flip after 5s
+        intervalRef.current = setInterval(flipPhoto, 5000);
+    };
 
     return (
     <section className={styles.Title}>
         <VerticalFlexbox>
-            <img 
-                src={process.env.PUBLIC_URL + "/images/main/gunwookim.png"} 
-                alt="Gun Woo Kim" 
-                className={styles.profileImage}
-            />
+            <div className={styles.container}>
+                <div className={styles.bar}>
+                    <span className={styles.text}>Actively Looking for Summer 2026 Internship</span>
+                    <span className={styles.text} aria-hidden="true">Actively Looking for Summer 2026 Internship</span>
+                </div>
+                <div className={styles.fadeLeft}></div>
+                <div className={styles.fadeRight}></div>
+            </div>
             <Margin size={1}/>
-            <h1 className={styles.name}>GunWoo (Kai) Kim</h1>
+            <div className={styles.photoBadge} onClick={handlePhotoClick}>
+                <div className={`${styles.flipContainer} ${isAiPhoto ? styles.flipped : ''}`}>
+                    <img 
+                        src={process.env.PUBLIC_URL + "/images/main/gunwookim3.png"}
+                        alt="Real Photo"
+                        className={`${styles.profileImage} ${styles.front}`}
+                    />
+                    <img 
+                        src={process.env.PUBLIC_URL + "/images/main/gunwookim.png"}
+                        alt="AI Photo"
+                        className={`${styles.profileImage} ${styles.back}`}
+                    />
+                </div>
+            </div>
+            <Margin size={1}/>
+            <h1 className={styles.name}>Gun Woo (Kai) Kim</h1>
             <div className={styles.pronunciation}>/kʌ.nu kim/</div>
 
             <p className={styles.descriptions}>Bachelor in CS & Math. 2027' Grinnell College</p>
 
             <p className={styles.descriptions}><u>Main Language:</u> Python, C++, JavaScript/TypeScript</p>
+            <p className={styles.descriptions}> closhuh @ gmail</p>
             <br/>
             <div className={styles.linksContainer}>
                 <a href="https://www.linkedin.com/in/gunwook/" target="_blank" rel="noopener noreferrer" className={styles.link}>

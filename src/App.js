@@ -12,7 +12,7 @@ const isMobile = window.innerWidth <= 768;
 function App() {
   return (
     <>
-      {isMobile ? <Margin size={5}/> : <Margin size={10}/>}
+      {isMobile ? <Margin size={5}/> : <Margin size={7}/>}
       <VerticalFlexbox>
 
         <Title/>
@@ -23,7 +23,7 @@ function App() {
         <WorkExperience/>
         <Education/>
         <p>building website...</p>
-        <Margin size={30}/>
+        <Margin size={3}/>
       </VerticalFlexbox>
     </>
   );

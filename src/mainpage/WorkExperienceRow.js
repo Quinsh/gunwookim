@@ -54,7 +54,7 @@ const WorkExperienceRow = ({ period, company, position, description, companyLogo
                             />
                         )}
                     </div>
-                    <div className={styles.equalWidthItemLeft}>{company}</div>
+                    <div className={`${styles.equalWidthItemLeft} ${styles.company}`}>{company}</div>
                 </div>
                 <div className={styles.lastTwo}>
                     <div className={styles.equalWidthItemRight}>{position}</div>
