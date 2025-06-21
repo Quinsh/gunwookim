@@ -1,6 +1,6 @@
 h1 {
     font-size: var(--font-size-title);
-    font-family: 'Poppins';
+    font-family: 'Song Myung', serif;
     font-weight: 600;
 }
 
@@ -17,6 +17,7 @@ h1 {
     font-style: normal; /* Non-italic */
     /* font-weight: bold; */
     color: var(--text-col);
+    font-family: 'Hahmlet', serif;
     /* background: linear-gradient(120deg, var(--gradient-red), var(--gradient-yellow), var(--gradient-green), var(--gradient-cyan), var(--gradient-pink));
     background-size: 300% 300%;
     animation: shine 15s ease-in-out infinite, colorChange 10s linear infinite;
@@ -211,6 +212,7 @@ h1 {
 }
 
 .text {
+    font-family: 'Inter';
     display: inline-block;
     white-space: nowrap;
     font-size: 1.2em;
@@ -242,3 +244,5 @@ h1 {
     right: 0;
     background: linear-gradient(to left, var(--background-col), rgba(255,179,71,0));
 }
+
+/* Font stacks for other elements are set in App.css */
