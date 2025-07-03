@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/gunwookim/static/css/main.da9c72c8.css",
-    "main.js": "/gunwookim/static/js/main.fd89086d.js",
-    "static/js/453.3bf22c17.chunk.js": "/gunwookim/static/js/453.3bf22c17.chunk.js",
-    "index.html": "/gunwookim/index.html",
-    "main.da9c72c8.css.map": "/gunwookim/static/css/main.da9c72c8.css.map",
-    "main.fd89086d.js.map": "/gunwookim/static/js/main.fd89086d.js.map",
-    "453.3bf22c17.chunk.js.map": "/gunwookim/static/js/453.3bf22c17.chunk.js.map"
+    "main.css": "/www.gunwookim.com/static/css/main.da9c72c8.css",
+    "main.js": "/www.gunwookim.com/static/js/main.48d98e2f.js",
+    "static/js/453.3bf22c17.chunk.js": "/www.gunwookim.com/static/js/453.3bf22c17.chunk.js",
+    "index.html": "/www.gunwookim.com/index.html",
+    "main.da9c72c8.css.map": "/www.gunwookim.com/static/css/main.da9c72c8.css.map",
+    "main.48d98e2f.js.map": "/www.gunwookim.com/static/js/main.48d98e2f.js.map",
+    "453.3bf22c17.chunk.js.map": "/www.gunwookim.com/static/js/453.3bf22c17.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.da9c72c8.css",
-    "static/js/main.fd89086d.js"
+    "static/js/main.48d98e2f.js"
   ]
 }
