@@ -19,22 +19,19 @@ const WorkExperience = () => {
         {
             period: '2025/06 - 2025/08',
             company: 'Mathematics Research, Polymath JR',
-            position: 'Summer Researcher',
-            location: 'remote, CA',
+            position: 'Researcher',
+            location: 'Remote, CA',
             description: (
                 <>
-                    descriptions coming soon...
+                    Researched <b>generative machine learning models</b> for <b>data assimilation</b> under the mentorship of Dr. Ricardo Baptista (Caltech) and Prof. Giulio Trigila (Baruch College, CUNY). Developed algorithms to sample from complex probability distributions using <b>optimal transport</b> techniques.
                 </>
-                // <>
-                //     Researched <b>generative machine learning models</b> for <b>data assimilation</b> under the mentorship of Dr. Ricardo Baptista (Caltech) and Prof. Giulio Trigila (Baruch College, CUNY). Developed algorithms to sample from complex probability distributions using <b>optimal transport</b> techniques.
-                // </>
             ),
             logo: process.env.PUBLIC_URL + '/images/companies/caltech.png'
         },
         {
             period: '2025/05 - 2025/07',
             company: 'Statistics Department, Grinnell',
-            position: 'Summer Researcher',
+            position: 'Researcher',
             location: 'Grinnell, IA',
             description: (
                 <>
@@ -48,7 +45,7 @@ const WorkExperience = () => {
             period: '2024/06 - 2024/08 (3mo)',
             company: 'BTG Pactual',
             position: 'Full Stack Intern',
-            location: '.NET, React, AWS',
+            location: 'Sao Paulo, Brazil',
             description: (
                 <>
                     Played a part in developing an intranet payment portal used by <b>50+ internal users</b> to process <b>$1B+</b> in contracts and payments between the bank and other service providers. I was in charge of developing the <b>delegate payment</b> functionality, which included modifying the <b>database</b>, creating and testing <b>APIs</b> in <b>.NET</b>, developing the front-end in <b>React</b>, deploying <b>CI/CD pipelines</b>, and managing <b>homologation</b> with the client.

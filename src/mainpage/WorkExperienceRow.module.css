@@ -27,7 +27,7 @@
 
 .firstTwo {
     display: flex;
-    flex: 5;
+    flex: 6;
     text-align: left;
     align-items: center;
     gap: 2em;
@@ -35,7 +35,7 @@
 
 .lastTwo {
     display: flex;
-    flex: 5;
+    flex: 4;
     text-align: right;
     gap: 2em;
 }

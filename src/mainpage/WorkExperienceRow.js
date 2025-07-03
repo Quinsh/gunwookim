@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import styles from './WorkExperienceRow.module.css';
 
-const WorkExperienceRow = ({ period, company, position, description, companyLogo }) => {
+const WorkExperienceRow = ({ period, company, position, location, description, companyLogo }) => {
     const rowRef = useRef(null);
     const descriptionRef = useRef(null);
 
@@ -58,6 +58,7 @@ const WorkExperienceRow = ({ period, company, position, description, companyLogo
                 </div>
                 <div className={styles.lastTwo}>
                     <div className={styles.equalWidthItemRight}>{position}</div>
+                    <div className={styles.equalWidthItemRight}>{location}</div>
                 </div>
             </div>
             <div className={styles.description} ref={descriptionRef}>
