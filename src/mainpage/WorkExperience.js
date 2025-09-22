@@ -9,12 +9,12 @@ const isMobile = window.innerWidth <= 768;
 const WorkExperience = () => {
     const experiences = [
         {
-            period: '2025/07 - ',
-            company: 'Skymirr Inc.',
+            period: '2025/09 - now',
+            company: 'Nobious Business Automation',
             position: 'SWE Intern',
-            location: 'Melbourne, FL',
-            description: 'Platform dev with MQTT protocol. description coming soon',
-            logo: process.env.PUBLIC_URL + '/images/companies/skymirr.png'
+            location: 'Grinnell, IA',
+            description: 'AI Chatbot development. Frontend and backend.',
+            logo: process.env.PUBLIC_URL + '/images/companies/Nobious.png'
         },
         {
             period: '2025/06 - 2025/08',
