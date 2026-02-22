@@ -16,14 +16,14 @@ const Education = () => {
             description: 'Relevant Coursework: Functional Programming, OOP w/ Java, Operating Systems, Algorithms, Multivariable Calculus, Linear Algebra, Number Theory, Differential Equations, Real Analysis, Abstract Algebra, Probability, ',
             logo: process.env.PUBLIC_URL + '/images/companies/grinnell.png'
         },
-        {
-            period: '~ 2023',
-            school: 'Korea University',
-            degree: 'B.S. Computer Science',
-            gpa: 'GPA: -',
-            description: '23학번 컴과. Dropped out.',
-            logo: process.env.PUBLIC_URL + '/images/companies/koreauniv.png'
-        }
+        // {
+        //     period: '~ 2023',
+        //     school: 'Korea University',
+        //     degree: 'B.S. Computer Science',
+        //     gpa: 'GPA: -',
+        //     description: '23학번 컴과. Dropped out.',
+        //     logo: process.env.PUBLIC_URL + '/images/companies/koreauniv.png'
+        // }
     ];
 
     return (
