@@ -9,7 +9,19 @@ const isMobile = window.innerWidth <= 768;
 const WorkExperience = () => {
     const experiences = [
         {
-            period: '2025/09 - now',
+            period: '2026/06 - 2026/08',
+            company: 'Grinnell College',
+            position: 'Researcher',
+            location: 'Grinnell, IA',
+            description: (
+                <>
+                    Research on Decision Procedure for Probabilistic Kleene Algebra with Angelic Nondeterminism with <a href="https://shawnong60.github.io/index.html" target="_blank" rel="noopener noreferrer">Prof. Shawn Ong</a>
+                </>
+            ),
+            logo: process.env.PUBLIC_URL + '/images/companies/grinnell.png'
+        },
+        {
+            period: '2025/09 - 2025/12',
             company: 'Nobious Business Automation',
             position: 'SWE Intern',
             location: 'Grinnell, IA',

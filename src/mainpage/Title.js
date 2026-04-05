@@ -38,8 +38,8 @@ const Title = () => {
         <VerticalFlexbox>
             <div className={styles.container}>
                 <div className={styles.bar}>
-                    <span className={styles.text}>Actively Looking for Summer 2026 Internship</span>
-                    <span className={styles.text} aria-hidden="true">Actively Looking for Summer 2026 Internship</span>
+                    <span className={styles.text}>Developing cool financial programs and trading strategies</span>
+                    <span className={styles.text} aria-hidden="true">Developing cool financial programs and trading strategies</span>
                 </div>
                 <div className={styles.fadeLeft}></div>
                 <div className={styles.fadeRight}></div>
@@ -48,7 +48,7 @@ const Title = () => {
             <div className={styles.photoBadge} onClick={handlePhotoClick}>
                 <div className={`${styles.flipContainer} ${isAiPhoto ? styles.flipped : ''}`}>
                     <img 
-                        src={process.env.PUBLIC_URL + "/images/main/gunwookim3.png"}
+                        src={process.env.PUBLIC_URL + "/images/main/gunwookim4.png"}
                         alt="Real Photo"
                         className={`${styles.profileImage} ${styles.front}`}
                     />
@@ -65,7 +65,7 @@ const Title = () => {
 
             <p className={styles.descriptions}>Bachelor in CS & Math. 2027' Grinnell College</p>
 
-            <p className={styles.descriptions}><u>Main Language:</u> Python, C++, JavaScript/TypeScript</p>
+            <p className={styles.descriptions}><u>Main Language:</u> C++, Python, JavaScript/TypeScript</p>
             <p className={styles.descriptions}> closhuh @ gmail</p>
             <br/>
             <div className={styles.linksContainer}>

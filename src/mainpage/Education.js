@@ -8,14 +8,33 @@ const isMobile = window.innerWidth <= 768;
 
 const Education = () => {
     const education = [
+        // {
+        //     period: '2026 - 2028',
+        //     school: <a href="https://www.engineering.columbia.edu/" target="_blank">Columbia University</a>,
+        //     degree: 'B.E. Operations Research',
+        //     gpa: 'GPA: X.XX/4.00',
+        //     description: (
+        //         <>
+        //             B.E. in Operations Research at Columbia SEAS.
+        //         </>
+        //     ),
+        //     logo: process.env.PUBLIC_URL + '/images/companies/columbia.png'
+        // },
         {
-            period: '2023 - 2027',
+            period: '2023 - 2026',
             school: <a href="https://www.grinnell.edu/" target="_blank">Grinnell College</a>,
-            degree: 'B.A. CS, Math',
-            gpa: 'GPA: 3.95/4.00',
-            description: 'Relevant Coursework: Functional Programming, OOP w/ Java, Operating Systems, Algorithms, Multivariable Calculus, Linear Algebra, Number Theory, Differential Equations, Real Analysis, Abstract Algebra, Probability, ',
+            degree: 'B.A. Mathematics & Computer Science',
+            gpa: 'GPA: 3.91/4.00',
+            description: (
+                <>
+                    <b>Relevant Coursework</b><br/> <br/>
+                    <u>Math:</u> Real Analysis, Probability I & II, Abstract Algebra, Differential Equations, Multivariable Calculus, Number Theory, Linear Algebra
+                    <br/> <br/>
+                    <u>CS:</u> Automata Theory, Operating Systems, Algorithms, OOP w/ Java, Software Development, Functional Programming
+                </>
+            ),
             logo: process.env.PUBLIC_URL + '/images/companies/grinnell.png'
-        },
+        }
         // {
         //     period: '~ 2023',
         //     school: 'Korea University',

@@ -1,6 +1,6 @@
 :root {
     /* Base Colors */
-    --background-col: oklch(98.4% 0.003 247.858);
+    --background-col: #f7f7f7;
     --text-col: #31393C;
     --pronunciation-col: #31393C;
     --link-col: #3296F4;
