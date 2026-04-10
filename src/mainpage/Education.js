@@ -8,23 +8,23 @@ const isMobile = window.innerWidth <= 768;
 
 const Education = () => {
     const education = [
-        // {
-        //     period: '2026 - 2028',
-        //     school: <a href="https://www.engineering.columbia.edu/" target="_blank">Columbia University</a>,
-        //     degree: 'B.E. Operations Research',
-        //     gpa: 'GPA: X.XX/4.00',
-        //     description: (
-        //         <>
-        //             B.E. in Operations Research at Columbia SEAS.
-        //         </>
-        //     ),
-        //     logo: process.env.PUBLIC_URL + '/images/companies/columbia.png'
-        // },
+        {
+            period: '2026 - 2028',
+            school: <a href="https://www.engineering.columbia.edu/" target="_blank">Columbia University</a>,
+            degree: 'B.E. Operations Research',
+            gpa: 'GPA: ',
+            description: (
+                <>
+                    Operations Research and Financial Engineering at Columbia SEAS.
+                </>
+            ),
+            logo: process.env.PUBLIC_URL + '/images/companies/columbia.png'
+        },
         {
             period: '2023 - 2026',
             school: <a href="https://www.grinnell.edu/" target="_blank">Grinnell College</a>,
-            degree: 'B.A. Mathematics & Computer Science',
-            gpa: 'GPA: 3.91/4.00',
+            degree: 'B.A. Mathematics',
+            gpa: 'GPA: 3.90/4.00',
             description: (
                 <>
                     <b>Relevant Coursework</b><br/> <br/>
@@ -34,15 +34,15 @@ const Education = () => {
                 </>
             ),
             logo: process.env.PUBLIC_URL + '/images/companies/grinnell.png'
+        },
+        {
+            period: '~ 2023',
+            school: 'Korea University',
+            degree: 'B.S. Computer Science',
+            gpa: 'GPA: -',
+            description: '23학번 컴과. Dropped out.',
+            logo: process.env.PUBLIC_URL + '/images/companies/koreauniv.png'
         }
-        // {
-        //     period: '~ 2023',
-        //     school: 'Korea University',
-        //     degree: 'B.S. Computer Science',
-        //     gpa: 'GPA: -',
-        //     description: '23학번 컴과. Dropped out.',
-        //     logo: process.env.PUBLIC_URL + '/images/companies/koreauniv.png'
-        // }
     ];
 
     return (
