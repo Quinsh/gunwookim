@@ -17,7 +17,7 @@ function App() {
 
         <Title/>
 
-        <Margin size={15}/>
+        <Margin size={6}/>
 
         <Projects/>
         <WorkExperience/>

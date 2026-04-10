@@ -1,10 +1,7 @@
 import React from 'react';
-import styles from './WorkExperience.module.css'
-import VerticalFlexboxFix from "./VerticalFlexboxFix";
+import styles from './WorkExperience.module.css';
 import WorkExperienceRow from './WorkExperienceRow';
 import Margin from '../Margin';
-
-const isMobile = window.innerWidth <= 768;
 
 const WorkExperience = () => {
     const experiences = [
@@ -68,10 +65,10 @@ const WorkExperience = () => {
     ];
 
     return (
-        <div id="work-experience">
-            <VerticalFlexboxFix width={'55em'}>
+        <div id="work-experience" className={styles.root}>
+            <div className={styles.inner}>
                 <h2>Work Experience</h2>
-                <div className={styles.onlyMobile}>(click row for details)</div>
+                <div className={styles.onlyMobile}>(scroll row into view for details)</div>
 
                 {experiences.map((exp, index) => (
                     <WorkExperienceRow
@@ -85,8 +82,8 @@ const WorkExperience = () => {
                     />
                 ))}
 
-                <Margin size={3}/>
-            </VerticalFlexboxFix>
+                <Margin size={3} />
+            </div>
         </div>
     );
 };

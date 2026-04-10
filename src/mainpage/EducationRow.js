@@ -1,51 +1,42 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styles from './EducationRow.module.css';
 
 const EducationRow = ({ period, school, degree, gpa, description, schoolLogo }) => {
     const rowRef = useRef(null);
-    const descriptionRef = useRef(null);
+    const [revealed, setRevealed] = useState(false);
 
     useEffect(() => {
+        const el = rowRef.current;
+        if (!el) return undefined;
+
         const observer = new IntersectionObserver(
             ([entry]) => {
-                if (entry.isIntersecting) {
-                    descriptionRef.current.style.margin = '1em 0 1em 25%';
-                    descriptionRef.current.style.opacity = '1';
-                    descriptionRef.current.style.maxHeight = '500px';
-                } else {
-                    descriptionRef.current.style.margin = '0 0 0 25%';
-                    descriptionRef.current.style.opacity = '0';
-                    descriptionRef.current.style.maxHeight = '0';
-                }
+                setRevealed(entry.isIntersecting);
             },
             {
                 root: null,
                 rootMargin: '0px',
-                threshold: 0.1
+                threshold: 0.12,
             }
         );
 
-        if (rowRef.current) {
-            observer.observe(rowRef.current);
-        }
-
-        return () => {
-            if (rowRef.current) {
-                observer.unobserve(rowRef.current);
-            }
-        };
+        observer.observe(el);
+        return () => observer.disconnect();
     }, []);
 
+    const logoAlt =
+        typeof school === 'string' ? `${school} logo` : 'School logo';
+
     return (
-        <>
-            <div className={styles.EducationRow} ref={rowRef}>
-                <div className={styles.firstTwo}>
-                    <div className={styles.equalWidthItemLeft}>{period}</div>
-                    <div className={styles.schoolLogo}>
+        <div className={styles.block} ref={rowRef}>
+            <div className={styles.rowHeader}>
+                <div className={styles.leftCluster}>
+                    <div className={styles.cellPeriod}>{period}</div>
+                    <div className={styles.cellLogo}>
                         {schoolLogo && (
-                            <img 
-                                src={schoolLogo} 
-                                alt={`${school} logo`} 
+                            <img
+                                src={schoolLogo}
+                                alt={logoAlt}
                                 className={styles.logoImage}
                                 onError={(e) => {
                                     console.error('Error loading image:', schoolLogo);
@@ -54,18 +45,21 @@ const EducationRow = ({ period, school, degree, gpa, description, schoolLogo }) 
                             />
                         )}
                     </div>
-                    <div className={styles.equalWidthItemLeft}>{school}</div>
+                    <div className={styles.cellMain}>{school}</div>
                 </div>
-                <div className={styles.lastTwo}>
-                    <div className={styles.equalWidthItemRight}>{degree}</div>
-                    <div className={styles.equalWidthItemRight}>{gpa}</div>
+                <div className={styles.rightCluster}>
+                    <div className={styles.cellR1}>{degree}</div>
+                    <div className={styles.cellR2}>{gpa}</div>
                 </div>
             </div>
-            <div className={styles.description} ref={descriptionRef}>
+            <div
+                className={`${styles.description} ${revealed ? styles.descriptionRevealed : ''}`}
+                aria-hidden={!revealed}
+            >
                 {description}
             </div>
-        </>
+        </div>
     );
 };
 
-export default EducationRow; 
+export default EducationRow;

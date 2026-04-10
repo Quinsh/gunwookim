@@ -63,7 +63,7 @@ const Title = () => {
             <h1 className={styles.name}>Gun Woo (Kai) Kim</h1>
             <div className={styles.pronunciation}>/kʌ.nu kim/</div>
 
-            <p className={styles.descriptions}>Bachelor in CS & Math. 2027' Grinnell College</p>
+            <p className={styles.descriptions}>BA. Math 2026' @ Grinnell College</p>
 
             <p className={styles.descriptions}><u>Main Language:</u> C++, Python, JavaScript/TypeScript</p>
             <p className={styles.descriptions}> closhuh @ gmail</p>

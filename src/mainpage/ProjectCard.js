@@ -1,37 +1,32 @@
 import React from 'react';
 import styles from './ProjectCard.module.css';
 
-const ProjectCard = ({ 
-    title, 
-    languages, 
-    linesOfCode, 
-    date, 
-    description, 
-    projectLink, 
-    image, 
-    isActive 
-}) => {
+const ProjectCard = ({ title, languages, date, description, projectLink, image }) => {
     return (
-        <div className={`${styles.projectCard} ${isActive ? styles.active : ''}`}>
-            <div className={styles.projectHeader}>
-                <h3>{title}</h3>
-                <div className={styles.projectMeta}>
+        <a
+            href={projectLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.card}
+            aria-label={`${title} — open project`}
+        >
+            <div className={styles.thumb}>
+                <img src={image} alt="" loading="lazy" decoding="async" />
+            </div>
+            <div className={styles.body}>
+                <h3 className={styles.title}>{title}</h3>
+                <p className={styles.meta}>
                     <span>{languages}</span>
-                    <span>{linesOfCode}</span>
+                    <span className={styles.metaSep} aria-hidden="true">
+                        ·
+                    </span>
                     <span>{date}</span>
-                </div>
-                <a href={projectLink} target="_blank" rel="noopener noreferrer" className={styles.projectLink}>
-                    View Project
-                </a>
+                </p>
+                <p className={styles.description}>{description}</p>
+                <span className={styles.cta}>View project →</span>
             </div>
-            <div className={styles.projectImage}>
-                <img src={image} alt={title} />
-            </div>
-            <div className={styles.projectDescription}>
-                <p>{description}</p>
-            </div>
-        </div>
+        </a>
     );
 };
 
-export default ProjectCard; 
+export default ProjectCard;

@@ -1,47 +1,10 @@
-.EducationRow {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
+/* Same grid columns as WorkExperienceRow so logos/descriptions align across sections */
+.block {
     width: 100%;
     margin: 0.3em 0;
-    gap: 1em;
-}
-
-.firstTwo {
-    display: flex;
-    flex: 5;
-    text-align: left;
-    align-items: center;
-    gap: 2em;
-}
-
-.lastTwo {
-    display: flex;
-    flex: 5;
-    text-align: right;
-    gap: 2em;
-}
-
-.equalWidthItemLeft {
-    flex: 1;
-    text-align: left;
-    min-width: 8em;
-}
-
-.equalWidthItemRight {
-    flex: 1;
-    text-align: right;
-    min-width: 8em;
-}
-
-.schoolLogo {
-    width: 2.5em;
-    height: 2.5em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    box-sizing: border-box;
+    color: var(--text-col);
+    min-width: 0;
 }
 
 .logoImage {
@@ -49,42 +12,177 @@
     height: 100%;
     object-fit: contain;
     border-radius: 4px;
+    display: block;
 }
 
-.description {
-    align-self: flex-start;
-    margin: 0 0 0 25%;
-    opacity: 0;
-    max-height: 0; 
-    overflow: hidden; 
-    transition: opacity 1.5s ease-in-out, max-height 2.5s ease-in-out, margin 1.5s ease-in-out;
-}
-
-.EducationRow:hover + .description,
-.description:hover {
-    margin: 1em 0 1em 25%;
-    opacity: 1;
-    max-height: 500px; 
-}
-
-.description.expanded {
-    margin: 1em 0 1em 25%;
-    opacity: 1;
-    max-height: 500px; 
-}
-
-@media (max-width: 768px) {
-    .EducationRow {
-        flex-direction: column;
+@media (min-width: 769px) {
+    .block {
+        display: grid;
+        grid-template-columns: 13rem 2.5em minmax(0, 1fr) max-content max-content;
+        column-gap: 1.5rem;
+        align-items: center;
     }
 
-    .firstTwo, .lastTwo {
-        min-width: 100%;
+    .rowHeader,
+    .leftCluster,
+    .rightCluster {
+        display: contents;
+    }
+
+    .cellPeriod {
+        min-width: 0;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    .cellLogo {
+        width: 2.5em;
+        height: 2.5em;
+        justify-self: start;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cellMain {
+        min-width: 0;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    .cellR1,
+    .cellR2 {
+        min-width: 0;
+        max-width: 16rem;
+        justify-self: end;
+        text-align: right;
+        overflow-wrap: anywhere;
+        word-break: break-word;
     }
 
     .description {
-        position: relative;
-        top: 0;
-        margin-top: 1em;
+        grid-column: 2 / -1;
+        grid-row: 2;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding-right: 0.25rem;
+        box-sizing: border-box;
+        align-self: start;
+        justify-self: stretch;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: opacity 0.45s ease, max-height 0.55s ease, margin 0.45s ease;
+        font-size: var(--font-size-description);
+        line-height: 1.55;
+        color: var(--text-col);
+        overflow-wrap: anywhere;
+        word-break: break-word;
     }
-} 
+
+    .descriptionRevealed {
+        margin: 0.85em 0 0.75em 0;
+        opacity: 1;
+        max-height: min(3200px, 250vh);
+    }
+}
+
+.description a {
+    color: var(--link-col);
+}
+
+@media (max-width: 768px) {
+    .block {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        margin: 0.65em 0;
+    }
+
+    .rowHeader {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4em;
+    }
+
+    .leftCluster {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.65em;
+        min-width: 0;
+    }
+
+    .rightCluster {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.65em;
+        justify-content: flex-start;
+        min-width: 0;
+    }
+
+    .cellPeriod,
+    .cellMain,
+    .cellR1,
+    .cellR2 {
+        flex: 1 1 auto;
+        min-width: 0;
+        text-align: left;
+        font-size: 0.92em;
+        line-height: 1.35;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    .cellPeriod {
+        flex: 0 0 auto;
+    }
+
+    .cellLogo {
+        width: 2.25em;
+        height: 2.25em;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .description {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding-right: 0;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: opacity 0.45s ease, max-height 0.55s ease, margin 0.45s ease;
+        font-size: var(--font-size-description-mobile);
+        line-height: 1.45;
+        color: var(--text-col);
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    .descriptionRevealed {
+        margin: 0.35em 0 0.85em 0;
+        opacity: 1;
+        max-height: min(3200px, 250vh);
+    }
+}
+
+@media (max-width: 380px) {
+    .cellPeriod,
+    .cellMain,
+    .cellR1,
+    .cellR2 {
+        font-size: 0.88em;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+}

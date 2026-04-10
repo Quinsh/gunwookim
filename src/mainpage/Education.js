@@ -1,18 +1,19 @@
 import React from 'react';
-import styles from './Education.module.css'
-import VerticalFlexboxFix from "./VerticalFlexboxFix";
+import styles from './Education.module.css';
 import EducationRow from './EducationRow';
 import Margin from '../Margin';
-
-const isMobile = window.innerWidth <= 768;
 
 const Education = () => {
     const education = [
         {
             period: '2026 - 2028',
-            school: <a href="https://www.engineering.columbia.edu/" target="_blank">Columbia University</a>,
-            degree: 'B.E. Operations Research',
-            gpa: 'GPA: ',
+            school: (
+                <a href="https://www.engineering.columbia.edu/" target="_blank" rel="noopener noreferrer">
+                    Columbia University
+                </a>
+            ),
+            degree: 'B.S. Operations Research',
+            gpa: 'GPA: -',
             description: (
                 <>
                     Operations Research and Financial Engineering at Columbia SEAS.
@@ -22,7 +23,11 @@ const Education = () => {
         },
         {
             period: '2023 - 2026',
-            school: <a href="https://www.grinnell.edu/" target="_blank">Grinnell College</a>,
+            school: (
+                <a href="https://www.grinnell.edu/" target="_blank" rel="noopener noreferrer">
+                    Grinnell College
+                </a>
+            ),
             degree: 'B.A. Mathematics',
             gpa: 'GPA: 3.90/4.00',
             description: (
@@ -46,10 +51,10 @@ const Education = () => {
     ];
 
     return (
-        <div id="education">
-            <VerticalFlexboxFix width={'55em'}>
+        <div id="education" className={styles.root}>
+            <div className={styles.inner}>
                 <h2>Education</h2>
-                <div className={styles.onlyMobile}>(click row for details)</div>
+                <div className={styles.onlyMobile}>(scroll row into view for details)</div>
 
                 {education.map((edu, index) => (
                     <EducationRow
@@ -63,8 +68,8 @@ const Education = () => {
                     />
                 ))}
 
-                <Margin size={3}/>
-            </VerticalFlexboxFix>
+                <Margin size={3} />
+            </div>
         </div>
     );
 };
