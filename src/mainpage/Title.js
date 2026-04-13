@@ -61,7 +61,7 @@ const Title = () => {
             </div>
             <Margin size={1}/>
             <h1 className={styles.name}>Gun Woo (Kai) Kim</h1>
-            <div className={styles.pronunciation}>/kʌ.nu kim/</div>
+            <div className={styles.pronunciation}>🪷 /kʌ.nu kim/</div>
 
             <p className={styles.descriptions}>BA. Math 2026' @ Grinnell College</p>
 
