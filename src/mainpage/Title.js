@@ -53,7 +53,7 @@ const Title = () => {
                         className={`${styles.profileImage} ${styles.front}`}
                     />
                     <img 
-                        src={process.env.PUBLIC_URL + "/images/main/gunwookim.png"}
+                        src={process.env.PUBLIC_URL + "/images/main/toothless1.png"}
                         alt="AI Photo"
                         className={`${styles.profileImage} ${styles.back}`}
                     />
