@@ -6,6 +6,16 @@ import Margin from '../Margin';
 const Projects = () => {
     const projects = [
         {
+            title: 'Polaris Engine',
+            languages: 'Python',
+            linesOfCode: '5000+ lines',
+            date: '2026/02/20',
+            description:
+                'Made $170k with this. Half-automatic stock searcher and risk management system.',
+            projectLink: 'https://github.com/Quinsh/polaris_engine',
+            image: process.env.PUBLIC_URL + '/images/projects/polaris_engine.jpg',
+        },
+        {
             title: 'Askit (Northwestern Hackathon 2025)',
             languages: 'React/TypeScript, TailwindCSS, Next.js, FastAPI',
             linesOfCode: 'XXXX lines',
@@ -44,25 +54,6 @@ const Projects = () => {
                 "Implementing Heuristics Backtracking for fast sudoku solving. Reference paper: 'A study of Sudoku solving algorithms'. Heuristics like Naked Pair, Naked Tuple, Hidden Pair, Hidden Tuple were used for constraint propagation. Used OpenCV for visual interface.",
             projectLink: 'https://github.com/Quinsh/FastSudokuSolver',
             image: process.env.PUBLIC_URL + '/images/projects/sudoku-solver.png',
-        },
-        {
-            title: 'Grinnell College Course Scheduler',
-            languages: 'Python, HTML/CSS',
-            linesOfCode: '1322 lines',
-            date: '2023/10/23',
-            description:
-                'Helping students find the best course combination when they input series of courses they want to take. Implemented with basic html/css and django for backend.',
-            projectLink: 'https://github.com/Quinsh/unconflict',
-            image: process.env.PUBLIC_URL + '/images/projects/unconflict-grinnell.png',
-        },
-        {
-            title: 'W A V E - mobile game',
-            languages: 'C#',
-            linesOfCode: '???? lines',
-            date: '2020/??/??',
-            description: 'Mobile game I made in Unity back in High School. 100 hours of solo development.',
-            projectLink: 'https://www.youtube.com/watch?v=MsnWCGpVDLE&t=74s',
-            image: process.env.PUBLIC_URL + '/images/projects/wave-game.png',
         },
     ];
 

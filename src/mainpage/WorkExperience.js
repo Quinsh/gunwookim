@@ -18,14 +18,6 @@ const WorkExperience = () => {
             logo: process.env.PUBLIC_URL + '/images/companies/grinnell.png'
         },
         {
-            period: '2025/09 - 2025/12',
-            company: 'Nobious Business Automation',
-            position: 'SWE Intern',
-            location: 'Grinnell, IA',
-            description: 'AI Chatbot development. Frontend and backend.',
-            logo: process.env.PUBLIC_URL + '/images/companies/Nobious.png'
-        },
-        {
             period: '2025/06 - 2025/08',
             company: 'Mathematics Research, Polymath JR',
             position: 'Researcher',
@@ -37,19 +29,19 @@ const WorkExperience = () => {
             ),
             logo: process.env.PUBLIC_URL + '/images/companies/caltech.png'
         },
-        {
-            period: '2025/05 - 2025/07',
-            company: 'Statistics Department, Grinnell',
-            position: 'Researcher',
-            location: 'Grinnell, IA',
-            description: (
-                <>
-                    Built educational tools and simulations for statistics and epidemiology using <b>Unity (C#)</b>, <b>R</b>, <b>PHP</b>, and <b>JavaScript</b>.<br/>
-                    Applied <b>Kalman Filters</b> in <b>R</b> to estimate <b>SIR model</b> parameters for real-time <b>infectious disease modeling</b>.
-                </>
-            ),
-            logo: process.env.PUBLIC_URL + '/images/companies/grinnell.png'
-        },
+        // {
+        //     period: '2025/05 - 2025/07',
+        //     company: 'Statistics Department, Grinnell',
+        //     position: 'Researcher',
+        //     location: 'Grinnell, IA',
+        //     description: (
+        //         <>
+        //             Built educational tools and simulations for statistics and epidemiology using <b>Unity (C#)</b>, <b>R</b>, <b>PHP</b>, and <b>JavaScript</b>.<br/>
+        //             Applied <b>Kalman Filters</b> in <b>R</b> to estimate <b>SIR model</b> parameters for real-time <b>infectious disease modeling</b>.
+        //         </>
+        //     ),
+        //     logo: process.env.PUBLIC_URL + '/images/companies/grinnell.png'
+        // },
         {
             period: '2024/06 - 2024/08 (3mo)',
             company: 'BTG Pactual',
