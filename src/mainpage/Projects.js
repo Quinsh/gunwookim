@@ -16,16 +16,6 @@ const Projects = () => {
             image: process.env.PUBLIC_URL + '/images/projects/polaris_engine.jpg',
         },
         {
-            title: 'Askit (Northwestern Hackathon 2025)',
-            languages: 'React/TypeScript, TailwindCSS, Next.js, FastAPI',
-            linesOfCode: 'XXXX lines',
-            date: '2025/04/05',
-            description:
-                'Askit is a powerful document search system that enables semantic search across your Google Drive documents. Unlike traditional keyword search, Askit understands the meaning behind your questions, delivering contextually relevant results from your documents.',
-            projectLink: 'https://github.com/HandsomeSB/Askit',
-            image: process.env.PUBLIC_URL + '/images/projects/askit.png',
-        },
-        {
             title: 'RSA Encrypted Messenger',
             languages: 'C',
             linesOfCode: '1141 lines',
