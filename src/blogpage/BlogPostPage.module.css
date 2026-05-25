@@ -1,0 +1,55 @@
+.page {
+    min-height: 100vh;
+    background-color: var(--background-col);
+    color: var(--text-col);
+}
+
+.inner {
+    width: min(760px, 88vw);
+    margin: 0 auto;
+}
+
+.title {
+    margin: 0;
+    font-size: 2.4em;
+    font-weight: 600;
+    font-family: 'Hahmlet', serif;
+}
+
+.date {
+    margin: 0.45em 0 1.2em;
+    color: var(--gray);
+}
+
+.body {
+    margin: 0 0 0.9em;
+    line-height: 1.75;
+    max-width: 65ch;
+}
+
+.backButton {
+    position: fixed;
+    top: 1.2em;
+    left: 1.2em;
+    z-index: 1000;
+    padding: 0.45em 0.85em;
+    border: 1px solid var(--text-col);
+    border-radius: 6px;
+    background-color: var(--background-col);
+    color: var(--text-col);
+    text-decoration: none;
+    text-transform: lowercase;
+    line-height: 1;
+    transition: all 0.2s ease;
+}
+
+.backButton:hover {
+    background-color: var(--text-col);
+    color: var(--background-col);
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2em;
+    }
+}

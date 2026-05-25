@@ -63,10 +63,8 @@ const Title = () => {
             <h1 className={styles.name}>Gun Woo (Kai) Kim</h1>
             <div className={styles.pronunciation}>🪷 /kʌ.nu kim/</div>
 
-            <p className={styles.descriptions}>BA. Math 2026' @ Grinnell College</p>
-
-            <p className={styles.descriptions}><u>Main Language:</u> C++, Python, JavaScript/TypeScript</p>
-            <p className={styles.descriptions}> closhuh @ gmail</p>
+            <p className={styles.descriptions}>BSOR'28 @ Columbia University</p>
+            <p className={styles.descriptions}> kai [dot] kim [at] columbia [dot] edu</p>
             <br/>
             <div className={styles.linksContainer}>
                 <a href="https://www.linkedin.com/in/gunwook/" target="_blank" rel="noopener noreferrer" className={styles.link}>
@@ -86,13 +84,14 @@ const Title = () => {
                     <span>Baekjoon OJ</span>
                 </a>
             </div>
-            <Margin size={1}/>
+            
+            {/* <Margin size={1}/>
             <div className={styles.navButtons}>
                 <a href="#projects" className={styles.navButton}>Projects</a>
                 <a href="#work-experience" className={styles.navButton}>Work Experience</a>
                 <a href="#education" className={styles.navButton}>Education</a>
             </div>
-            <Margin size={1}/>
+            <Margin size={1}/> */}
         </VerticalFlexbox>
     </section>  
     )
