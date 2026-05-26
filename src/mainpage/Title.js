@@ -5,8 +5,10 @@ import Margin from '../Margin';
 
 const Title = () => {
     const [isAiPhoto, setIsAiPhoto] = useState(false);
+    const [nameWidth, setNameWidth] = useState(0);
     const intervalRef = useRef(null);
     const timeoutRef = useRef(null);
+    const nameRef = useRef(null);
 
     const flipPhoto = () => setIsAiPhoto((prev) => !prev);
 
@@ -22,6 +24,28 @@ const Title = () => {
             clearTimeout(timeoutRef.current);
             clearInterval(intervalRef.current);
         };
+    }, []);
+
+    useEffect(() => {
+        const nameElement = nameRef.current;
+
+        if (!nameElement) return undefined;
+
+        const updateNameWidth = () => {
+            setNameWidth(nameElement.getBoundingClientRect().width);
+        };
+
+        updateNameWidth();
+
+        if (typeof ResizeObserver !== "undefined") {
+            const resizeObserver = new ResizeObserver(updateNameWidth);
+            resizeObserver.observe(nameElement);
+
+            return () => resizeObserver.disconnect();
+        }
+
+        window.addEventListener("resize", updateNameWidth);
+        return () => window.removeEventListener("resize", updateNameWidth);
     }, []);
 
     // Reset timer on manual click
@@ -60,11 +84,11 @@ const Title = () => {
                 </div>
             </div>
             <Margin size={1}/>
-            <h1 className={styles.name}>Gun Woo (Kai) Kim</h1>
+            <h1 ref={nameRef} className={styles.name}>Gun Woo (Kai) Kim</h1>
             <div className={styles.pronunciation}>🪷 /kʌ.nu kim/</div>
-
             <p className={styles.descriptions}>BSOR'28 @ Columbia University</p>
             <p className={styles.descriptions}> kai [dot] kim [at] columbia [dot] edu</p>
+
             <br/>
             <div className={styles.linksContainer}>
                 <a href="https://www.linkedin.com/in/gunwook/" target="_blank" rel="noopener noreferrer" className={styles.link}>
@@ -84,7 +108,21 @@ const Title = () => {
                     <span>Baekjoon OJ</span>
                 </a>
             </div>
+    
             
+            <div
+                className={styles.separator}
+                style={nameWidth ? { maxWidth: `${Math.round(nameWidth)}px` } : undefined}
+                aria-hidden="true"
+            />
+
+            <p
+                className={styles.introductionText}
+                style={nameWidth ? { maxWidth: `${Math.round(nameWidth)}px` } : undefined}
+            >
+                Hi. I like implementing financial strategies and programs. Aiming for $1M AUM before graduation. Currently, transferring to Columbia for Operations Research program. Feel free to connect.
+            </p>
+
             {/* <Margin size={1}/>
             <div className={styles.navButtons}>
                 <a href="#projects" className={styles.navButton}>Projects</a>
