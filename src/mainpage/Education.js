@@ -33,9 +33,9 @@ const Education = () => {
             description: (
                 <>
                     <b>Relevant Coursework</b><br/> <br/>
-                    <u>Math:</u> Real Analysis, Probability I & II, Abstract Algebra, Differential Equations, Multivariable Calculus, Number Theory, Linear Algebra
+                    <u>Math:</u> 316 Real Analysis, 335 Probability I, 336 Probability II, 321 Abstract Algebra, 220 Differential Equations, 218 Number Theory, 215 Linear Algebra, 133 Multivariable Calculus
                     <br/> <br/>
-                    <u>CS:</u> Automata Theory, Operating Systems, Algorithms, OOP w/ Java, Software Development, Functional Programming
+                    <u>CS:</u> 341 Automata Theory, 213 Operating Systems, 301 Algorithms, 207 OOP w/ Java, 151 Functional Programming
                 </>
             ),
             logo: process.env.PUBLIC_URL + '/images/companies/grinnell.png'
@@ -44,7 +44,7 @@ const Education = () => {
             period: '~ 2023',
             school: 'Korea University',
             degree: 'B.S. Computer Science',
-            gpa: 'GPA: -',
+            gpa: 'GPA: 4.00/4.00',
             description: '23학번 컴과. Dropped out.',
             logo: process.env.PUBLIC_URL + '/images/companies/koreauniv.png'
         }
