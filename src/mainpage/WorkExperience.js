@@ -19,9 +19,9 @@ const WorkExperience = () => {
         },
         {
             period: '2025/06 - 2025/08',
-            company: 'Mathematics Research, Polymath JR',
+            company: 'Mathematics Research',
             position: 'Researcher',
-            location: 'Remote, CA',
+            location: '',
             description: (
                 <>
                     Researched <b>generative machine learning models</b> for <b>data assimilation</b> under the mentorship of Dr. Ricardo Baptista (Caltech) and Prof. Giulio Trigila (Baruch College, CUNY). Developed algorithms to sample from complex probability distributions using <b>optimal transport</b> techniques.
