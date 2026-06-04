@@ -51,7 +51,7 @@ function App() {
 
   return (
     <>
-      {isMobile ? <Margin size={5}/> : <Margin size={7}/>}
+      {isMobile ? <Margin size={2}/> : <Margin size={3}/>}
       <VerticalFlexbox>
 
         <Title/>

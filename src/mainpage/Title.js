@@ -122,6 +122,7 @@ const Title = () => {
             >
                 Hi. I like implementing financial strategies and programs. Aiming for $1M AUM before graduation. Currently, transferring to Columbia for Operations Research program. Feel free to connect.
             </p>
+            <a href="#/blog" className={styles.blogLink}>&gt; blog &lt;</a>
 
             {/* <Margin size={1}/>
             <div className={styles.navButtons}>

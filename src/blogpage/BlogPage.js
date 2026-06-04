@@ -10,13 +10,13 @@ const BlogPage = () => {
       <section className={styles.inner}>
         <Margin size={4} />
         <h1 className={styles.title}>Blog</h1>
-        <p className={styles.subtitle}>Thoughts, notes, and work logs.</p>
         <ul className={styles.entryList}>
-          {blogPosts.map((entry) => (
+          {blogPosts.map((entry, index) => (
             <li key={entry.slug} className={styles.entryItem}>
               <a href={`#/blog/${entry.slug}`} className={styles.entryLink}>
-                <h2 className={styles.entryTitle}>{entry.title}</h2>
-                <p className={styles.entryDate}>{entry.date}</p>
+                <span className={styles.entryId}>{String(index + 1).padStart(2, "0")}</span>
+                <span className={styles.entryTitle}>{entry.title}</span>
+                <span className={styles.entryDate}>{entry.date}</span>
               </a>
             </li>
           ))}

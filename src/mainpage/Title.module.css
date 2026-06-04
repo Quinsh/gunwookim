@@ -68,6 +68,20 @@ h1 {
     text-align: left;
 }
 
+.blogLink {
+    align-self: center;
+    font-size: var(--font-size-description);
+    color: var(--text-col);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    margin: 1em 0 0.6em;
+    transition: opacity 0.15s ease;
+}
+
+.blogLink:hover {
+    opacity: 0.5;
+}
+
 .separator {
     width: 100%;
     max-width: 100%;
