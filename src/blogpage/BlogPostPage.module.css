@@ -5,7 +5,7 @@
 }
 
 .inner {
-    width: min(620px, 88vw);
+    width: 50vw;
     margin: 0 auto;
 }
 
@@ -47,6 +47,10 @@
 }
 
 @media (max-width: 768px) {
+    .inner {
+        width: 88vw;
+    }
+
     .title {
         font-size: 1.25em;
     }

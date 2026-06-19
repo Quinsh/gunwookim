@@ -11,10 +11,10 @@ const BlogPage = () => {
         <Margin size={4} />
         <h1 className={styles.title}>Blog</h1>
         <ul className={styles.entryList}>
-          {blogPosts.map((entry, index) => (
+          {blogPosts.map((entry, i) => ({ ...entry, creationIndex: i })).sort((a, b) => new Date(b.date) - new Date(a.date)).map((entry) => (
             <li key={entry.slug} className={styles.entryItem}>
               <a href={`#/blog/${entry.slug}`} className={styles.entryLink}>
-                <span className={styles.entryId}>{String(index + 1).padStart(2, "0")}</span>
+                <span className={styles.entryId}>{String(entry.creationIndex + 1).padStart(2, "0")}</span>
                 <span className={styles.entryTitle}>{entry.title}</span>
                 <span className={styles.entryDate}>{entry.date}</span>
               </a>
