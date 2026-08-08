@@ -62,8 +62,8 @@ const Title = () => {
         <VerticalFlexbox>
             <div className={styles.container}>
                 <div className={styles.bar}>
-                    <span className={styles.text}>Developing cool financial programs and trading strategies</span>
-                    <span className={styles.text} aria-hidden="true">Developing cool financial programs and trading strategies</span>
+                    <span className={styles.text}>Currently developing Argus AI - an AI hedge fund based on macro modeling.</span>
+                    <span className={styles.text} aria-hidden="true">Currently developing Argus AI - an AI hedge fund based on macro modeling.</span>
                 </div>
                 <div className={styles.fadeLeft}></div>
                 <div className={styles.fadeRight}></div>
@@ -120,7 +120,7 @@ const Title = () => {
                 className={styles.introductionText}
                 style={nameWidth ? { maxWidth: `${Math.round(nameWidth)}px` } : undefined}
             >
-                Hi. I like implementing financial strategies and programs. Aiming for $1M AUM before graduation. Currently, transferring to Columbia for Operations Research program. Feel free to connect.
+                Hi. I like implementing financial strategies and programs. Feel free to contact.
             </p>
             <a href="#/blog" className={styles.blogLink}>&gt; blog &lt;</a>
 
